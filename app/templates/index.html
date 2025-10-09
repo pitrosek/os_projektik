@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Products{% endblock %}
+{% block content %}
+  <h1>Products</h1>
+  <ul>
+    {% for p in products %}
+      <li>{{ p.name }} — {{ p.price }}</li>
+    {% else %}
+      <li>No products yet.</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
